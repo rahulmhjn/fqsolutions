@@ -11,17 +11,24 @@ const passport = require("passport");
 const localStrategy = require("passport-local");
 const passportLocalMongoose = require("passport-local-mongoose");
 var flash = require('connect-flash');
-const {check, validationResult} = require('express-validator/check');
 
 var config = require('./config');
 const url = config.mongoUrl;
-const connect = mongoose.connect(url,{ useNewUrlParser: true });
-const conn = mongoose.createConnection(url);
+const connect = mongoose.connect(url,{ useNewUrlParser: true })
+  .catch((e) => { console.log(e); throw e; });
+const conn = mongoose.createConnection(url,{ useNewUrlParser: true })
+.catch((e) => { console.log(e); throw e; });
 
 connect.then((db) => {
   console.log("connected to the server and database");
-},(err) => {console.log("unable to connect to server and database");});
+},(err) => {console.log("unable to connect to server and database");
+console.log(db);});
 
+// conn.once("open", () => {
+//   //init stream
+//   gfs = grid(conn.db, mongoose.mongo);
+//   gfs.collection("ques_paper");
+// });
 
 var app = express();
 

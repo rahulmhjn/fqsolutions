@@ -22,7 +22,7 @@ var UserSchema = mongoose.Schema({
       },
       resetPasswordToken: String,
       resetPasswordExpires: Date
-});
+},{ useNewUrlParser: true });
 
 var User = module.exports = mongoose.model('User', UserSchema);
 

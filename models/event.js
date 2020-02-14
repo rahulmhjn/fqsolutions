@@ -6,6 +6,6 @@ var eventSchema = new mongoose.Schema({
     time: String,
     description: String,
     venue: String
-});
+},{ useNewUrlParser: true });
 
 module.exports = mongoose.model("Event",eventSchema);
