@@ -1,0 +1,64 @@
+<% include ./partials/header %>
+
+
+
+
+    <br><br><br>
+
+    <div class="section">
+     <div class="container-fluid">
+        <div class="col-md-12" style="display: flex; flex-direction: row; margin-top: 5%;"><br><br>
+          <a href="/"> <h2 class="ft_hd" style="color: black;">Home &nbsp;  &nbsp; <hr class="hr_" style="border-top: 5px solid #f3850a;
+            width: 80%;
+            margin-right: 20%;
+            margin-top: 2px;"> </h2></a>
+
+
+
+         <a href=""> <h2 class="ft_hd" style="color: black;"> <i class="fas fa-angle-double-right"></i>  &nbsp; Events <hr class="hr_" style="border-top: 5px solid #f3850a;
+            width: 40%;
+            margin-right: 30%;
+            margin-top: 2px;"></h2></a>
+       </div>
+       <div class="container">
+      <div class="col-md-12">
+       <div class="row" >
+        <table id="customers1">
+            
+            
+            <thead>
+                <th width="20%">Event Title</th>
+                <th width="10%">Date</th>
+                <th width="10%">Time</th>
+                <th width="30%">Description</th>
+                <th width="20%">Venue</th>
+                
+              </thead>
+          
+          <% if(event.length!=0){
+              event.forEach((fnot)=>{%>
+                <tr>
+                    <td><%=fnot.title%></td>
+                    <td><%=fnot.date%> </td>
+                    <td><%=fnot.time%> </td>
+                    <td><%=fnot.description%> </td>
+                    <td><%=fnot.venue%> </td>
+                        </tr>
+             <% })
+          }%>
+         
+         
+        </table>
+</div>
+       </div>
+      </div>
+      
+      <br>
+      <br>
+    </div>
+</div>
+
+<br>
+<br>
+
+<% include ./partials/footer %>

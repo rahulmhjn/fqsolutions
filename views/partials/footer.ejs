@@ -1,0 +1,281 @@
+  <!---------======================== POPUP 1  ========================================-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><b>Click On One ?</b></h4>
+        </div>
+        <div class="modal-body">
+          <div class="row" style="text-align: center;">
+            <button type="button" class="btn btn-primary"   data-toggle="modal" data-target="#myModal2"> <i class="fas fa-user"></i> Sign Up</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3" > <i class="fas fa-user-cog"></i> Log In</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-------------------------------POPUP admin signup------------------------------------------------>
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><b>Register Yourself </b></h4>
+        </div>
+        <div class="modal-body">
+          <div class="">
+            <div class="">
+                <form id="f2" action="/users/register" method="POST">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Name </label>
+                        <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">email </label>
+                        <input name="email" type="email" class="form-control" id="formGroupExampleInput" placeholder="Enter Email">
+                      </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Username </label>
+                      <input name="username" type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
+                    </div>
+                    <div class="form-group ">
+                      <label for="formGroupExampleInput2">Password</label>
+                      <input name="password" type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                      <p class="pull-right up_1" onclick="showpassword(this)" style="margin: auto;"><i class="fas fa-eye"></i></p>
+                    </div>
+                    <div class="form-group ">
+                        <label for="formGroupExampleInput2">Confirm Password</label>
+                        <input name="password2" type="password" class="form-control" id="formGroupExampleInput2" placeholder="Re-enter Password">
+                        <p class="pull-right up_1" onclick="showpassword(this)" style="margin: auto;"><i class="fas fa-eye"></i></p>
+                      </div>
+                  </form>
+                  
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button form="f2" type="submit" class="btn btn-primary pull-left">Submit</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!---------======================== POPUP 2 admin login========================================-->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><b>Verify Yourself </b></h4>
+        </div>
+        <div class="modal-body">
+          <div class="">
+            <div class="">
+                <form id="f" action="/users/login" method="POST">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Username </label>
+                      <input name="username" type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
+                    </div>
+                    <div class="form-group ">
+                      <label for="formGroupExampleInput2">Password</label>
+                      <input name="password" type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                      <p class="pull-right up_1" onclick="showpassword(this)" style="margin: auto;"><i class="fas fa-eye"></i></p>
+                    </div>
+                  </form>
+                    <a href="" data-toggle="modal" data-target="#myModal4" >Forgot Password</a>
+                  
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button form="f" type="submit" class="btn btn-primary pull-left">Submit</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!---------======================== POPUP 4 admin reset password========================================-->
+    <div class="modal fade" id="myModal4" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>Enter Your Email </b></h4>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <div class="">
+                  <form id="f3" action="/users/forgot" method="POST">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Email </label>
+                        <input name="email" type="text" class="form-control" id="formGroupExampleInput" placeholder="rahul.mahajan676@gmail.com">
+                      </div>
+                     
+                    
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button form="f3" type="submit" class="btn btn-primary pull-left">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
+      <!-- Footer -->
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  
+  <!---------====================================-->
+  <!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  
+      <div class="footerOuter">
+          <div id="footer">
+              <div class="logo">
+                 <img src="/img/lions-serve-1.png" class="logo_bot">
+              </div>
+              <div class="links">
+                  <h3>Links<hr class="hr_ft"></h3>
+                  <a data-toggle="modal" data-target="#exampleModalabout">About Us</a>
+                  <a href=""></a>
+                  <a href="">Our Team</a>
+                  <a href="">Contact Us</a>
+                  <a href="">Terms and Conditions</a>
+                  <a data-toggle="modal" data-target="#exampleModalprivacy">Policy</a>
+              </div>
+              <div class="address">
+                  <h3>Contact<hr class="hr_ft"></h3>
+                  <h4><i class="fas fa-envelope addIcon"></i>rahul.mahajan676@gmail.com</h3>
+                  <h4><i class="fas fa-phone-alt addIcon"></i>+911234567891</h3>
+                  <h4><i class="fas fa-phone-alt addIcon"></i>+911234567891</h3>
+                      <div class="social-info">
+                          <a href="" target="blank_" ><i class="fab fa-facebook-square social"></i></a>
+                          <a href="" target="blank_" ><i class="fab fa-twitter-square social"></i></a>
+                          <a href="" target="blank_" ><i class="fab fa-instagram social"></i></a>
+                          </div>
+              </div>
+              <div class="social-infoUpper bd_lft">
+                  <div class="pd1">
+                      <h2 class="ft_hd">Coming soon <hr class="hr_"></h2>
+                      <div class="row" style="text-align: center;">
+                     <div class="col-md-6" style="text-align: center">
+                       <img src="/img/android.png" class="app_">
+                       <p class="txt_app">Google Play</p>
+                     </div>
+                     <div class="col-md-6" style="text-align: center;">
+                        <img src="/img/ios.png" class="app_">
+                        <p class="txt_app">App Store</p>
+                      </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="container-fluid" style="background: white; height: 60px;">
+              <div class="copywrite">
+                  <p><i class="fas fa-copyright copywriteIcon"></i> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <span>Er. Rahul Mahajan </span> || Designed and developed by <span><a href=""> Rahul Mahajan </a></span></p>
+              </div>
+          </div>
+      </div>
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  <!-----------=========================================== change footer  =====================================================================================-->        
+  
+  <script>
+    $(".toggle-password").click(function() {
+  
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+  input.attr("type", "text");
+  } else {
+  input.attr("type", "password");
+  }
+  });</script>
+  <script>
+  $(function() {
+        var chk = $('#checkbox');
+        var btn = $('#btncheck');
+      
+        chk.on('change', function() {
+          btn.prop("disabled", !this.checked);//true: disabled, false: enabled
+        }).trigger('change'); //page load trigger event
+      });</script>
+  
+  
+  <script>
+    $(function() {
+          var chk1 = $('#checkbox1');
+          var btn1 = $('#btncheck1');
+        
+          chk1.on('change', function() {
+            btn1.prop("disabled", !this.checked);//true: disabled, false: enabled
+          }).trigger('change'); //page load trigger event
+        });
+        </script>
+  
+  
+  
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <script>
+        function readURL1(input) {
+       if (input.files && input.files[0]) {
+           var reader = new FileReader();
+  
+           reader.onload = function (e) {
+               $('#imgsrc')
+                   .attr('src', e.target.result);
+           };
+  
+           reader.readAsDataURL(input.files[0]);
+       }
+   }
+  </script>
+  <!--Start of Tawk.to Script-->
+  <script>
+  function showpassword(el){
+  if(el.parentElement.children[1].type == "password"){
+    el.parentElement.children[1].type = "text";
+    el.style.color = "#227ab3";
+  }
+  else{
+    el.parentElement.children[1].type = "password";
+    el.style.color = "black";
+  }
+  }</script>
+      
+     
+  </body>
+  </html>

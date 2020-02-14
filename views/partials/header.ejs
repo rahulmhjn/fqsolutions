@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="/css/jquery-3.3.1.slim.min.js"></script>
+    <script src="/css/popper.min.js"></script>
+    <script src="/css/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <script src="/js/all.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Rahul's Project</title>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <!-- <div class="preloading">
+        <div class="preUpper">
+            <img src="../img/preloadergif.gif" alt="Loading">
+        </div>
+    </div> -->
+    
+        <a href="/" class="float1 dropbtnLoginc">
+            <p class="ico"> <i class="fas fa-home"></i> &nbsp; </p>
+             <p>
+                 Dashboard
+     
+             </p>
+             </a>
+    
+    
+    <div class="mininav">
+        <div class="minileft">
+            <p class="head_1">FQ Solutions</p>
+        </div>
+        <div class="miniright">
+                <a href="" target="blank_" class="ic1"><i class="fab fa-facebook-square social"></i></a>
+                <a href="" target="blank_" class="ic2"><i class="fab fa-twitter-square social"></i></a>
+                <a href="" target="blank_" class="ic3"><i class="fab fa-instagram social"></i></a>
+        </div>
+    </div>
+    <!-- navbar -->
+    <div id="navbar">
+        <nav>
+            <div class="navInput smallSearch"><input type="text" placeholder="Search" id="searchInput2"><button><i class="fas fa-search i"></i></button></div>
+            <div class="navOpen">
+                    <i class="fas fa-bars i" onclick="changeIcon(this)"></i>
+            </div>
+           
+            <div class="logo"><a href="/"><img src="/img/lions-serve-1.png" alt=""></a></div>
+            <div class="navright">
+                
+             
+                <% if(currentUser) {%>
+                    <div class="dropdownLogin">
+                        <a href="/users/logout" ><h4 class="dropbtnLogin"><img src="" alt=""> Logout &nbsp; <i class="fas fa-sign-out-alt"></i></h4></a>
+                    </div>
+                <% } else{ %>
+                    <div class="dropdownLogin">
+                        <a href="" data-toggle="modal" data-target="#myModal" ><h4 class="dropbtnLogin"><img src="" alt=""> Click Here &nbsp; <i class="fas fa-upload"></i></h4></a>
+                    </div>
+                    
+                <% } %>
+               
+            </div>
+        </nav>
+    </div>
+    <% if(error && error.length>0) {%>
+            <!-- <div class="flash blink">
+                <div class="innerflash">
+                    <i class="fas fa-times i"></i>
+                    <%=error%>
+                </div>
+        </div> -->
+    <%}%>
+
+    <% if(success && success.length>0) {%>    
+            <div class="flash2">
+                <div class="innerflash">
+                    <i class="fas fa-check-double i"></i>
+                    <%=success%>
+                </div>
+        </div>
+    <%}%>
