@@ -14,7 +14,7 @@ var flash = require('connect-flash');
 const {check, validationResult} = require('express-validator/check');
 
 var config = require('./config');
-const url = config.mongoUrl;
+const url = 'mongodb+srv://rahul:'+'Rahul@123'+'@cluster0-aisct.mongodb.net/test?retryWrites=true&w=majority';
 const connect = mongoose.connect(url,{ useNewUrlParser: true });
 const conn = mongoose.createConnection(url);
 
@@ -63,6 +63,8 @@ app.use(function(req, res, next){
 });
 
 
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -83,3 +85,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
